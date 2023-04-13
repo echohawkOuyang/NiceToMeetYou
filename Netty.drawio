@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-12T10:09:55.570Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="5RYQpe3dUqUMCLGO7FBt" version="21.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-13T03:25:58.554Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="qDY3_cSfpDqdWl1RY2G7" version="21.1.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="747" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -13,7 +13,10 @@
         <mxCell id="YezV5wfbExkr-e6byGoz-0" value="NioEventLoopGroup" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="340" y="90" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YezV5wfbExkr-e6byGoz-4" value="Select" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="YezV5wfbExkr-e6byGoz-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-4" target="YezV5wfbExkr-e6byGoz-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-4" value="SelectorProvider.provider()" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="170" width="200" height="130" as="geometry" />
         </mxCell>
         <mxCell id="YezV5wfbExkr-e6byGoz-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-6" target="YezV5wfbExkr-e6byGoz-9">
@@ -31,11 +34,68 @@
         <mxCell id="YezV5wfbExkr-e6byGoz-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-12" target="YezV5wfbExkr-e6byGoz-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YezV5wfbExkr-e6byGoz-12" value="new ThreadPerTaskExecutor(newDefaultThreadFactory());把其中的Runable放到FastThreadLocalThread中去运行 这个属性就是executor&lt;br&gt;children = new EventExecutor[nThreads]; 其中放入NioEventLoop" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="YezV5wfbExkr-e6byGoz-12" value="new ThreadPerTaskExecutor(newDefaultThreadFactory());把其中的Runable放到FastThreadLocalThread中去运行 这个属性就是executor&lt;br&gt;children = new EventExecutor[nThreads]; 其中放入NioEventLoop&lt;br&gt;terminationFuture中添加全部child数量的监听事件" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="710" y="170" width="450" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-14" target="YezV5wfbExkr-e6byGoz-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-14" target="YezV5wfbExkr-e6byGoz-18">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="YezV5wfbExkr-e6byGoz-14" value="new NioEventLoop()" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1220" y="187.5" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-16" value="&lt;div&gt;provider = selectorProvider;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; final SelectorTuple selectorTuple = openSelector();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; selector = selectorTuple.selector;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; unwrappedSelector = selectorTuple.unwrappedSelector;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1140" y="340" width="360" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-18" target="YezV5wfbExkr-e6byGoz-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-18" target="YezV5wfbExkr-e6byGoz-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-18" value="SingleThreadEventLoop" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1500" y="187.5" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-20" target="YezV5wfbExkr-e6byGoz-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-20" target="YezV5wfbExkr-e6byGoz-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-20" value="SingleThreadEventExecutor" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1780" y="187.5" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-22" target="YezV5wfbExkr-e6byGoz-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-22" value="AbstractScheduledEventExecutor" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2060" y="187.5" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-24" target="YezV5wfbExkr-e6byGoz-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-24" value="AbstractEventExecutor" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2340" y="187.5" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-26" value="parent放入NioEventGroup" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2380" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-28" value="&lt;div&gt;this.executor = ThreadExecutorMap.apply(executor, this);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; taskQueue = newTaskQueue(this.maxPendingTasks);&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1675" y="370" width="410" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-30" value="tailTasks = newTaskQueue(maxPendingTasks);" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1480" y="370" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="YezV5wfbExkr-e6byGoz-32" target="YezV5wfbExkr-e6byGoz-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-32" value="ServerBootstrap&lt;br&gt;this.group = group;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="415" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YezV5wfbExkr-e6byGoz-34" value="ServerBootstrap&lt;br&gt;this.childGroup = childGroup;&lt;br&gt;this.channelFactory = channelFactory;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="387.5" width="220" height="115" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
